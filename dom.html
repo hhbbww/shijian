@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	button{
+		width: 100px;
+		height: 50px;
+		font-size: 26px;
+		color: #0085b0;
+		margin-right: 10px;
+	}
+	#slide{
+		width: 215px;
+		height: 210px;
+		background: red;
+		margin-top: 20px;
+		transition: 0.5s;
+	}
+</style>
+<body>
+	<button>上拉</button>
+	<button>下拉</button>
+	<div id="slide"></div>
+	<script>
+		let btns = document.getElementsByTagName('button');
+		let box = document.getElementById('slide');
+		btns[0].onclick = function(){
+			box.style.height = '210px';
+		}
+		btns[1].onclick =function(){
+			box.style.height = 0;
+		}
+	</script>
+</body>
+</html>
